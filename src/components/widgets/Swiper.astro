@@ -1,24 +1,21 @@
 ---
-import { Icon } from "astro-icon/components";
+import { Icon } from 'astro-icon/components';
 import Image from '~/components/common/Image.astro';
 ---
 
 <div id="main_hero" class="w-full h-screen astro-S3CKSQXZ">
   <div
-    class="swiper astro-S3CKSQXZ swiper-initialized swiper-horizontal swiper-ios swiper-watch-progress swiper-backface-hidden"
+    class="swiper astro-S3CKSQXZ"
   >
     <div class="swiper-wrapper astro-S3CKSQXZ">
       <div
-        class="bg_custom_slide swiper-slide parallax-bg flex flex-col gap-4 astro-S3CKSQXZ swiper-slide-visible swiper-slide-active"
+        class="bg_custom_slide swiper-slide flex flex-col gap-4 astro-S3CKSQXZ"
         style='background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("https://a-us.storyblok.com/f/1013485/900x1597/945480b707/slider_ri_movil.webp"); width: 390px;'
       >
         <span
-          class="font-univers-49 text-[5vw] lg:text-2xl uppercase text-[#fff] astro-S3CKSQXZ"
+          class="text-[5vw] lg:text-2xl uppercase text-[#fff] astro-S3CKSQXZ"
           data-swiper-parallax-y="-600"
           data-swiper-parallax-duration="500"
-          style="transform: translate3d(0px, 0px, 0px);"
-          _msttexthash="118326"
-          _msthash="17"
         >
           R.I Clinic
         </span>
@@ -29,42 +26,19 @@ import Image from '~/components/common/Image.astro';
           data-swiper-parallax-duration="600"
           style="transform: translate3d(0px, 0px, 0px);"
         >
-          <font _mstmutation="1" _msttexthash="713414" _msthash="18"
-            ><span class="tracking-tighter astro-S3CKSQXZ" _mstmutation="1" _istranslated="1"
-              >Inspired by <br _istranslated="1" />
-            </span>
-            <span
-              class="portrait:text-[12vw] md:portrait:text-[15vw] landscape:text-[15vh] font-baskerville italic text-[#fff] astro-S3CKSQXZ"
-              _mstmutation="1"
-              _istranslated="1">the extraordinary</span
-            ></font
-          >
+            <span class="tracking-tighter astro-S3CKSQXZ">Inspired by the extraordinary</span>
         </h2>
+      </div>
 
-        <a
-          data-swiper-parallax="-800"
-          data-swiper-parallax-duration="700"
-          href="/portafolio/88673"
-          class="uppercase py-2 px-4 w-fit h-fit font-futura text-[4vw] lg:text-2xl flex gap-4 overflow-hidden astro-NOOLMW6A"
-          style="--text_color: white; --bg_color: #F64C71; transform: translate3d(0px, 0px, 0px);"
-          ><p
-            class="astro-NOOLMW6A"
-            style="--text_color: white;--bg_color: #F64C71;"
-            _msttexthash="131807"
-            _msthash="19"
-          >
-            VIEW PROJECT
-          </p>
-          <img
-            src="/svg/flecha_diagonal.svg"
-            alt="arrow"
-            class="invert-0 astro-NOOLMW6A"
-            style="--text_color: white;--bg_color: #F64C71;"
-            _mstalt="75205"
-            _msthash="20"
-          /></a
-        >
-      </div><div
+
+
+
+
+
+
+      
+
+      <div
         class="bg_custom_slide swiper-slide parallax-bg flex flex-col gap-4 astro-S3CKSQXZ swiper-slide-next"
         style='background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("https://a-us.storyblok.com/f/1013485/900x1597/8055442e64/slider_tresguerras_movil.webp"); width: 390px;'
       >
@@ -72,9 +46,6 @@ import Image from '~/components/common/Image.astro';
           class="font-univers-49 text-[5vw] lg:text-2xl uppercase text-[#000] astro-S3CKSQXZ"
           data-swiper-parallax-y="-600"
           data-swiper-parallax-duration="500"
-          style="transform: translate3d(0px, 600px, 0px);"
-          _msttexthash="132509"
-          _msthash="21"
         >
           Three Wars
         </span>
@@ -178,13 +149,16 @@ import Image from '~/components/common/Image.astro';
         >
       </div>
     </div>
-    
+
     <div class="w-full absolute bottom-0 z-10 flex lg:hidden items-center justify-between p-8 pb-16">
       <div class="swiper-pagination astro-S3CKSQXZ"></div>
-      
+
       <div class="flex items-center gap-2">
-        <Icon name = "tabler:circle-arrow-left-filled" class="swiper-button-prev text-4xl text-loco-red transition-all"></Icon>
-        <Icon name = "tabler:circle-arrow-right-filled" class="swiper-button-next text-4xl text-loco-red transition-all"></Icon>
+        <Icon name="tabler:circle-arrow-left-filled" class="swiper-button-prev text-4xl text-loco-red transition-all" />
+        <Icon
+          name="tabler:circle-arrow-right-filled"
+          class="swiper-button-next text-4xl text-loco-red transition-all"
+        />
       </div>
     </div>
   </div>
@@ -234,34 +208,32 @@ import Image from '~/components/common/Image.astro';
 
   .bg-loco-purple {
     --tw-bg-opacity: 1;
-    background-color: rgb(32 38 178/var(--tw-bg-opacity));
+    background-color: rgb(32 38 178 / var(--tw-bg-opacity));
   }
-  
+
   .text-loco-red {
     --tw-text-opacity: 1;
-    color: rgb(246 76 113/var(--tw-text-opacity));
+    color: rgb(246 76 113 / var(--tw-text-opacity));
   }
-
-
 </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script is:inline>
   const swiper = new Swiper('.swiper', {
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
 
-
-});
+    parallax : true,
+  });
 </script>
 
 <script>
