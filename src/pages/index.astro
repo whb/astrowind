@@ -10,10 +10,56 @@ const metadata = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
   ignoreTitleTemplate: true,
 };
+
+const slides = [
+  {
+    kicker: '效率',
+    background: 'url("https://a-us.storyblok.com/f/1013485/1600x900/b1c8d8fa71/slider_ri.webp")',
+    background_movil: 'url("https://a-us.storyblok.com/f/1013485/900x1597/945480b707/slider_ri_movil.webp")',
+    title: '城配干线大宗多维度运输<br><br>',
+    highlight: '优化运力',
+    text_color: '#fff',
+    url_project: '',
+    btn_href: '/portafolio/88673',
+    btn_bg_color: '#F64C71',
+    btn_text_color: 'white',
+    invert_arrow_color: false,
+  },
+  {
+    kicker: '智慧',
+    background: 'url("https://a-us.storyblok.com/f/1013485/1600x900/716f9d3b5e/slider_tresguerras.webp")',
+    background_movil:
+      'url("https://a-us.storyblok.com/f/1013485/900x1597/8055442e64/slider_tresguerras_movil.webp")',
+    title: 'Nos unimos <br>',
+    highlight: 'al viaje',
+    text_color: '#000',
+    url_project: '',
+    btn_href: '/portafolio/88680',
+    btn_bg_color: '#57F1B1',
+    btn_text_color: 'black',
+    invert_arrow_color: true,
+  },
+  {
+    kicker: '科技',
+    background: 'url("https://a-us.storyblok.com/f/1013485/1600x900/7e59c926ee/slider_tropper.webp")',
+    background_movil: 'url("https://a-us.storyblok.com/f/1013485/900x1597/487d4820d8/slider_tropper_movil.webp")',
+    title: 'Movemos <br>',
+    highlight: 'personas',
+    text_color: '#000',
+    url_project: '',
+    btn_href: '/portafolio/88682',
+    btn_bg_color: '#ABEBFF',
+    btn_text_color: 'black',
+    invert_arrow_color: true,
+  },
+];
+
 ---
 
 <Layout metadata={metadata}>
-  <Swiper></Swiper>
+
+  <!-- Hero Slides ******************* -->
+  <Swiper slides={slides} />
 
   <!-- Hero Widget ******************* -->
 
