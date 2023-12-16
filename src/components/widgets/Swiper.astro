@@ -52,7 +52,7 @@ const taiwindTextColor = (color) => {
       <div class="swiper-pagination astro-S3CKSQXZ"></div>
 
       <div class="flex items-center gap-2">
-        <Icon name="tabler:circle-arrow-left-filled" class="swiper-button-prev text-4xl text-loco-red transition-all" />
+        <Icon name="tabler:circle-arrow-left-filled" class="swiper-button-prev text-loco-red transition-all" />
         <Icon
           name="tabler:circle-arrow-right-filled"
           class="swiper-button-next text-4xl text-loco-red transition-all"
@@ -63,6 +63,12 @@ const taiwindTextColor = (color) => {
 </div>
 
 <style>
+  .swiper {
+      --swiper-navigation-size: 64px;
+      --swiper-navigation-sides-offset: 100px;
+      --swiper-navigation-top-offset: 10%;
+  }
+
   a:where(.astro-NOOLMW6A) {
     background-color: var(--bg_color);
     color: var(--text_color);
@@ -123,7 +129,6 @@ const taiwindTextColor = (color) => {
 <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script is:inline>
   const swiper = new Swiper('.swiper', {
-    // If we need pagination
     pagination: {
       el: '.swiper-pagination',
     },
