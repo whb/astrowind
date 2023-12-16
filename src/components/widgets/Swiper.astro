@@ -1,8 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
-
 const { slides } = Astro.props;
-
 const taiwindTextColor = (color) => {
   return 'text-[' + color + ']';
 };
@@ -31,15 +29,8 @@ const taiwindTextColor = (color) => {
               data-swiper-parallax-duration="600"
               style="transform: translate3d(0px, 0px, 0px);"
             >
-              {item.title && (
-                <span class="tracking-tighter astro-S3CKSQXZ" set:html={item.title} />
-              )}
-              <span
-                class:list={[
-                  'portrait:text-[8vw] italic astro-S3CKSQXZ',
-                  taiwindTextColor(item.text_color),
-                ]}
-              >
+              {item.title && <span class="tracking-tighter astro-S3CKSQXZ" set:html={item.title} />}
+              <span class:list={['portrait:text-[8vw] italic astro-S3CKSQXZ', taiwindTextColor(item.text_color)]}>
                 {item.highlight}
               </span>
             </h2>
@@ -49,10 +40,16 @@ const taiwindTextColor = (color) => {
     </div>
 
     <div class="w-full absolute bottom-0 z-10 flex items-center justify-between p-8 pb-16">
-      <div class="swiper-pagination astro-S3CKSQXZ"></div>
+      <div class="flex flex-col gap-2">
+        <div class="swiper-pagination flex gap-2 astro-S3CKSQXZ"></div>
+        <span class="font-bold font-futura">© XIANGLONGZHIYUN 2023</span>
+      </div>
 
       <div class="flex items-center gap-2">
-        <Icon name="tabler:circle-arrow-left-filled" class="swiper-button-prev text-loco-red transition-all" />
+        <Icon 
+          name="tabler:circle-arrow-left-filled" 
+          class="swiper-button-prev text-4xl text-loco-red transition-all" 
+        />
         <Icon
           name="tabler:circle-arrow-right-filled"
           class="swiper-button-next text-4xl text-loco-red transition-all"
@@ -62,30 +59,37 @@ const taiwindTextColor = (color) => {
   </div>
 </div>
 
+<style is:global>
+  .swiper-pagination-bullet {
+    width: 1rem;
+    background-color: #3c3c3c;
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 4rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(32 38 178 / var(--tw-bg-opacity));
+  }
+
+</style>
+
 <style>
-  .swiper {
-      --swiper-navigation-size: 64px;
-      --swiper-navigation-sides-offset: 20px;
-      --swiper-navigation-top-offset: 10%;
-      --swiper-pagination-bottom: 76px;
-  }
-
-  a:where(.astro-NOOLMW6A) {
-    background-color: var(--bg_color);
-    color: var(--text_color);
-  }
-
-  .swiper:where(.astro-S3CKSQXZ),
-  main:where(.astro-S3CKSQXZ) {
+  .swiper,
+  main {
     position: relative;
   }
 
-  .swiper:where(.astro-S3CKSQXZ) {
+  .swiper {
     height: 100%;
     width: 100%;
   }
 
-  .swiper-slide:where(.astro-S3CKSQXZ) {
+  .swiper-slide {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,21 +100,21 @@ const taiwindTextColor = (color) => {
     background-position: center center;
   }
 
-  .progress-bg:where(.astro-S3CKSQXZ) {
+  .progress-bg {
     background-color: #fff;
   }
 
-  .pl-open-menu:where(.astro-S3CKSQXZ) {
+  .pl-open-menu {
     padding-left: 400px;
   }
 
   @media screen and (max-width: 1023px) {
-    .swiper-slide:where(.astro-S3CKSQXZ) {
+    .swiper-slide {
       justify-content: flex-start;
       padding: 15vh 2rem 2rem;
     }
 
-    .pl-open-menu:where(.astro-S3CKSQXZ) {
+    .pl-open-menu {
       padding-left: 2rem;
     }
   }
@@ -126,20 +130,21 @@ const taiwindTextColor = (color) => {
   }
 </style>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script is:inline>
-  const swiper = new Swiper('.swiper', {
+<script>
+  import { Swiper } from 'swiper';
+  import 'swiper/css';
+  import { Navigation, Pagination, Parallax } from 'swiper/modules';
+
+  new Swiper('.swiper', {
+    modules: [Navigation, Pagination, Parallax],
     pagination: {
       el: '.swiper-pagination',
     },
-
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-
     parallax: true,
   });
 </script>
