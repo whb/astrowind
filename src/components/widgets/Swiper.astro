@@ -3,7 +3,7 @@ import { Icon } from 'astro-icon/components';
 const { slides } = Astro.props;
 const taiwindTextColor = (color) => {
   //return 'text-[' + color + ']';
-  return color
+  return color;
 };
 ---
 
@@ -47,14 +47,8 @@ const taiwindTextColor = (color) => {
       </div>
 
       <div class="flex items-center gap-2">
-        <Icon 
-          name="bi:arrow-left-circle-fill" 
-          class="swiper-button-prev text-4xl text-loco-red transition-all" 
-        />
-        <Icon
-          name="bi:arrow-right-circle-fill"
-          class="swiper-button-next text-4xl text-loco-red transition-all"
-        />
+        <Icon name="bi:arrow-left-circle-fill" class="swiper-button-prev text-4xl text-loco-red transition-all" />
+        <Icon name="bi:arrow-right-circle-fill" class="swiper-button-next text-4xl text-loco-red transition-all" />
       </div>
     </div>
   </div>
@@ -132,7 +126,7 @@ const taiwindTextColor = (color) => {
 
   .font-futura {
     font-family: 'Futura Condensed PT', sans-serif;
-    font-weight: 200
+    font-weight: 200;
   }
 </style>
 
