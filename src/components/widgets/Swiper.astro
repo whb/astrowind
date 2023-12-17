@@ -6,14 +6,14 @@ const taiwindTextColor = (color) => {
 };
 ---
 
-<div id="main_hero" class="w-full h-screen astro-S3CKSQXZ">
-  <div class="swiper astro-S3CKSQXZ">
-    <div class="swiper-wrapper astro-S3CKSQXZ">
+<div id="main_hero" class="w-full h-screen">
+  <div class="swiper">
+    <div class="swiper-wrapper">
       {
         slides.map((item) => (
-          <div class="bg_custom_slide swiper-slide flex flex-col gap-4 astro-S3CKSQXZ">
+          <div class="bg_custom_slide swiper-slide flex flex-col gap-4">
             <span
-              class:list={['text-[5vw] lg:text-2xl uppercase astro-S3CKSQXZ', taiwindTextColor(item.text_color)]}
+              class:list={['text-[5vw] lg:text-2xl uppercase', taiwindTextColor(item.text_color)]}
               data-swiper-parallax-y="-600"
               data-swiper-parallax-duration="500"
             >
@@ -22,15 +22,15 @@ const taiwindTextColor = (color) => {
 
             <h2
               class:list={[
-                'mb-8 portrait:text-[10vw] md:portrait:text-[12vw] landscape:text-[12vh]  leading-[120%] astro-S3CKSQXZ',
+                'mb-8 portrait:text-[10vw] md:portrait:text-[12vw] landscape:text-[12vh]  leading-[120%]',
                 taiwindTextColor(item.text_color),
               ]}
               data-swiper-parallax="-700"
               data-swiper-parallax-duration="600"
               style="transform: translate3d(0px, 0px, 0px);"
             >
-              {item.title && <span class="tracking-tighter astro-S3CKSQXZ" set:html={item.title} />}
-              <span class:list={['portrait:text-[8vw] italic astro-S3CKSQXZ', taiwindTextColor(item.text_color)]}>
+              {item.title && <span class="tracking-tighter" set:html={item.title} />}
+              <span class:list={['portrait:text-[8vw] italic', taiwindTextColor(item.text_color)]}>
                 {item.highlight}
               </span>
             </h2>
@@ -41,17 +41,17 @@ const taiwindTextColor = (color) => {
 
     <div class="w-full absolute bottom-0 z-10 flex items-center justify-between p-8 pb-16">
       <div class="flex flex-col gap-2">
-        <div class="swiper-pagination flex gap-2 astro-S3CKSQXZ"></div>
-        <span class="font-bold font-futura">© XIANGLONGZHIYUN 2023</span>
+        <div class="swiper-pagination flex gap-2"></div>
+        <span class="font-bold font-futura">© XIANGLONG ZHIYUN 2023</span>
       </div>
 
       <div class="flex items-center gap-2">
         <Icon 
-          name="tabler:circle-arrow-left-filled" 
+          name="bi:arrow-left-circle" 
           class="swiper-button-prev text-4xl text-loco-red transition-all" 
         />
         <Icon
-          name="tabler:circle-arrow-right-filled"
+          name="bi:arrow-right-circle"
           class="swiper-button-next text-4xl text-loco-red transition-all"
         />
       </div>
@@ -60,6 +60,8 @@ const taiwindTextColor = (color) => {
 </div>
 
 <style is:global>
+  @import url('https://fonts.cdnfonts.com/css/futura-condensed-pt');
+
   .swiper-pagination-bullet {
     width: 1rem;
     background-color: #3c3c3c;
@@ -75,7 +77,6 @@ const taiwindTextColor = (color) => {
     --tw-bg-opacity: 1;
     background-color: rgb(32 38 178 / var(--tw-bg-opacity));
   }
-
 </style>
 
 <style>
@@ -119,14 +120,14 @@ const taiwindTextColor = (color) => {
     }
   }
 
-  .bg-loco-purple {
-    --tw-bg-opacity: 1;
-    background-color: rgb(32 38 178 / var(--tw-bg-opacity));
-  }
-
   .text-loco-red {
     --tw-text-opacity: 1;
     color: rgb(246 76 113 / var(--tw-text-opacity));
+  }
+
+  .font-futura {
+    font-family: 'Futura Condensed PT', sans-serif;
+    font-weight: 200
   }
 </style>
 
