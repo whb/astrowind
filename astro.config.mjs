@@ -64,7 +64,6 @@ export default defineConfig({
 
     tasks(),
     
-    /*
     compress({
       CSS: true,
       HTML: false,
@@ -73,7 +72,6 @@ export default defineConfig({
       SVG: true,
       Logger: 1,
     }),
-    */
   ],
 
   markdown: {
