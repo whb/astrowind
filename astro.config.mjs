@@ -55,6 +55,8 @@ export default defineConfig({
         bi: [
           'arrow-left-circle',
           'arrow-right-circle',
+          'arrow-left-circle-fill',
+          'arrow-right-circle-fill',
         ],
       },
     }),

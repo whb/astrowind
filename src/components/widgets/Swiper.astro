@@ -47,11 +47,11 @@ const taiwindTextColor = (color) => {
 
       <div class="flex items-center gap-2">
         <Icon 
-          name="bi:arrow-left-circle" 
+          name="bi:arrow-left-circle-fill" 
           class="swiper-button-prev text-4xl text-loco-red transition-all" 
         />
         <Icon
-          name="bi:arrow-right-circle"
+          name="bi:arrow-right-circle-fill"
           class="swiper-button-next text-4xl text-loco-red transition-all"
         />
       </div>
@@ -76,6 +76,10 @@ const taiwindTextColor = (color) => {
     width: 4rem;
     --tw-bg-opacity: 1;
     background-color: rgb(32 38 178 / var(--tw-bg-opacity));
+  }
+
+  .swiper-button-disabled path {
+    fill-opacity: 0.4;
   }
 </style>
 
